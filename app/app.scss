@@ -1,0 +1,30 @@
+@import url(https://fonts.googleapis.com/css?family=Rambla);
+
+$rem:12px;
+$verde-mula:#54BE9B;
+$negro-mula:#404045;
+$fuente-mula:"Rambla";
+$espacio:20px;
+$espacio-de-letra-titulo:4px;
+$tamano: 3rem;
+
+#loading{
+    background-color: black;
+    color: white;
+    font-size: 16px;
+}
+
+html,
+document,
+body{
+    font-size: $rem;
+    font-family: $fuente-mula, sans-serif;
+    // height: 100%;
+    // width: 100%;
+    overflow-x: hidden;
+}
+
+main{
+    padding-left: $espacio;
+    padding-right: $espacio;
+}

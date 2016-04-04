@@ -1,0 +1,15 @@
+html,
+document,
+body {
+  font-size: 12px;
+  font-family: "Helvetica";
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; }
+
+main {
+  height: 100%;
+  widows: 100%;
+  overflow-x: hidden;
+  padding-left: 20px;
+  padding-right: 20px; }
