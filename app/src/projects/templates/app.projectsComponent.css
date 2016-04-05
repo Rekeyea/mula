@@ -2,7 +2,7 @@
 #loading {
   background-color: black;
   color: white;
-  font-size: 16px; }
+  font-size: 14.4px; }
 
 html,
 document,
@@ -12,11 +12,25 @@ body {
   overflow-x: hidden; }
 
 main {
-  padding-left: 20px;
-  padding-right: 20px; }
+  background-color: #f2f2f2 !important;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px; }
+  main .main {
+    background-color: white;
+    top: 0;
+    left: 0px;
+    bottom: 0px;
+    left: 80px;
+    right: 80px;
+    position: absolute; }
 
 #projects {
-  padding-right: 40px; }
+  padding-right: 60px;
+  padding-left: 40px; }
   #projects .img-wrapper {
     position: relative;
     display: inline-block;
@@ -27,16 +41,24 @@ main {
     #projects .img-wrapper .overlay {
       top: 100%;
       height: 0px;
-      transition: 1s;
+      transition: 0.6s;
       opacity: 0;
       width: 100%;
       position: absolute; }
-      #projects .img-wrapper .overlay > span {
+      #projects .img-wrapper .overlay > div {
         position: absolute;
         bottom: 1rem;
         left: 1rem;
-        font-size: 24px;
-        letter-spacing: 6px; }
+        right: 1rem; }
+      #projects .img-wrapper .overlay > div.head {
+        font-size: 36px;
+        top: 50%;
+        position: absolute;
+        width: 100%;
+        margin-top: -2%;
+        text-align: center; }
+        #projects .img-wrapper .overlay > div.head strong {
+          font-size: 14.4px; }
   #projects .img-wrapper:hover .overlay {
     width: 100%;
     height: 100%;
@@ -50,7 +72,7 @@ main {
     text-align: center;
     color: white;
     font-size: 20px;
-    transition: 0.8s;
+    transition: 0.6s;
     opacity: 0.8; }
   #projects .img {
     vertical-align: top;

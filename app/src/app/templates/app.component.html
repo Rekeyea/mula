@@ -1,27 +1,31 @@
 <main>
-    <header class="row" id="app-header">
+    <div class="main">
+        <header class="row" id="app-header">
         <h1>
             {{title}}
         </h1>
-    </header>
-    <nav id="app-navigation" class="row center-xs">
-        <ul class="navigation-list col-xs-12">
-            <li class="navigation-item" *ngFor="#link of links" [ngClass]="{'active':link.active}">
-                <a class="navigation-link" [routerLink]="[link.url]" href="" (click)="selectLink(link)">{{link.name}}</a>
-            </li>
-        </ul>       
-    </nav>
-    <article id="app-content">
-        <router-outlet></router-outlet>
-    </article>
-    <footer id="app-footer" class="row">
-        <div *ngFor="#social of socialIcons">
-            <a target="_blank" href="{{social.url}}"><i [ngClass]="social.icon"></i></a>
-        </div>
-    </footer>
-    <footer id="app-footer-trademark" class="row">
-        <div>
-            &copy; {{trademark}}
-        </div>
-    </footer>
+        </header>
+        <nav id="app-navigation" class="row center-xs">
+            <ul class="navigation-list col-xs-12">
+                <li class="navigation-item" *ngFor="#link of links" [ngClass]="{'active':link.active}">
+                    <a class="navigation-link" [routerLink]="[link.url]" href="" (click)="selectLink(link)">{{link.name}}</a>
+                </li>
+            </ul>       
+        </nav>
+        <article id="app-content">
+            <router-outlet></router-outlet>
+        </article>
+        <footer id="app-footer" class="row center-xs">
+            <div>
+                <div *ngFor="#social of socialIcons">
+                    <a target="_blank" href="{{social.url}}"><i [ngClass]="social.icon"></i></a>
+                </div>
+            </div>
+        </footer>
+        <footer id="app-footer-trademark" class="row">
+            <div>
+                &copy; {{trademark}}
+            </div>
+        </footer>
+    </div>
 </main>

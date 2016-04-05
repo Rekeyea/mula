@@ -2,7 +2,7 @@
 #loading {
   background-color: black;
   color: white;
-  font-size: 16px; }
+  font-size: 14.4px; }
 
 html,
 document,
@@ -12,8 +12,21 @@ body {
   overflow-x: hidden; }
 
 main {
-  padding-left: 20px;
-  padding-right: 20px; }
+  background-color: #f2f2f2 !important;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px; }
+  main .main {
+    background-color: white;
+    top: 0;
+    left: 0px;
+    bottom: 0px;
+    left: 80px;
+    right: 80px;
+    position: absolute; }
 
 #app-header {
   height: 8rem; }
@@ -54,17 +67,39 @@ main {
       color: white !important; }
 
 #app-footer {
-  width: 15rem;
   margin: 0 auto;
   height: 6rem;
-  padding-top: 4rem; }
-  #app-footer div {
-    margin: 0 auto; }
-    #app-footer div i {
-      font-size: 2rem;
-      color: #54BE9B; }
+  padding-top: 4rem;
+  position: absolute;
+  bottom: 9rem;
+  width: 100%; }
+  #app-footer > div {
+    margin: 0 auto;
+    text-align: center; }
+    #app-footer > div > div {
+      display: inline-block;
+      padding-left: 1rem;
+      padding-right: 1rem; }
+      #app-footer > div > div i {
+        font-size: 2rem;
+        color: #54BE9B; }
+  #app-footer > .app-footer {
+    width: 12rem;
+    position: absolute; }
+    #app-footer > .app-footer > div {
+      margin: 0 auto;
+      text-align: center; }
+      #app-footer > .app-footer > div > div {
+        display: inline-block; }
+        #app-footer > .app-footer > div > div i {
+          font-size: 2rem;
+          color: #54BE9B; }
 
 #app-footer-trademark {
+  position: absolute;
+  bottom: 2rem;
+  left: 0px;
+  right: 0px;
   padding-top: 4rem;
   font-size: 0.7rem;
   width: 15rem;
