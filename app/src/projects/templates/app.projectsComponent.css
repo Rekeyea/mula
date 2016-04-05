@@ -22,16 +22,21 @@ main {
     display: inline-block;
     margin: 10px;
     height: 100%;
-    width: 100%; }
-  #projects .overlay {
-    display: none;
-    height: 100%;
-    width: 100%; }
-    #projects .overlay > span {
-      position: absolute;
-      bottom: 1rem;
-      left: 1rem;
-      font-size: 24px; }
+    width: 100%;
+    overflow: hidden; }
+    #projects .img-wrapper .overlay {
+      top: 100%;
+      height: 0px;
+      transition: 1s;
+      opacity: 0;
+      width: 100%;
+      position: absolute; }
+      #projects .img-wrapper .overlay > span {
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+        font-size: 24px;
+        letter-spacing: 6px; }
   #projects .img-wrapper:hover .overlay {
     width: 100%;
     height: 100%;
@@ -39,14 +44,14 @@ main {
     position: absolute;
     top: 0;
     left: 0;
-    display: inline-block;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     text-align: center;
     color: white;
-    padding: 12px;
-    font-size: 20px; }
+    font-size: 20px;
+    transition: 0.8s;
+    opacity: 0.8; }
   #projects .img {
     vertical-align: top;
     height: 100%;
