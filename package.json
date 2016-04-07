@@ -2,6 +2,9 @@
   "name": "mula",
   "version": "1.0.0",
   "description": "Web Application for Mula Design Space",
+  "engines":{
+    "node":"4.2.2"  
+  },
   "main": "app.js",
   "scripts": {
     "prepublish": "bower install",
