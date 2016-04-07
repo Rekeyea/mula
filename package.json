@@ -2,8 +2,8 @@
   "name": "mula",
   "version": "1.0.0",
   "description": "Web Application for Mula Design Space",
-  "engines":{
-    "node":"4.2.2"  
+  "engines": {
+    "node": "4.2.2"
   },
   "main": "app.js",
   "scripts": {
@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "angular2": "^2.0.0-beta.13",
+    "bower": "^1.7.9",
     "es6-promise": "^3.1.2",
     "es6-shim": "^0.35.0",
     "express": "^4.13.4",
