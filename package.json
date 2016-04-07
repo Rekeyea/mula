@@ -4,6 +4,7 @@
   "description": "Web Application for Mula Design Space",
   "main": "app.js",
   "scripts": {
+    "prepublish": "bower install",
     "test": "test",
     "start": "node app.js",
     "lite": "lite-server",
