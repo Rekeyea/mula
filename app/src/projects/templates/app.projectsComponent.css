@@ -9,78 +9,69 @@ document,
 body {
   font-size: 12px;
   font-family: "Rambla", sans-serif;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  margin-top: 0px !important; }
 
 main {
-  background-color: #f2f2f2 !important;
-  width: 100%;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  bottom: 0px; }
+  background-color: #f2f2f2 !important; }
   main .main {
-    background-color: white;
-    top: 0;
-    left: 0px;
-    bottom: 0px;
-    left: 80px;
-    right: 80px;
-    position: absolute; }
+    background-color: white; }
 
-#projects {
-  padding-right: 60px;
-  padding-left: 40px; }
-  #projects .img-wrapper {
-    position: relative;
-    display: inline-block;
-    margin: 10px;
-    height: 100%;
-    width: 100%;
-    overflow: hidden; }
-    #projects .img-wrapper .overlay {
-      top: 100%;
-      height: 0px;
-      transition: 0.6s;
-      opacity: 0;
-      width: 100%;
-      position: absolute; }
-      #projects .img-wrapper .overlay > div {
-        position: absolute;
-        bottom: 1rem;
-        left: 1rem;
-        right: 1rem; }
-      #projects .img-wrapper .overlay > div.head {
-        font-size: 36px;
-        top: 50%;
-        position: absolute;
-        width: 100%;
-        margin-top: -2%;
-        text-align: center; }
-        #projects .img-wrapper .overlay > div.head strong {
-          font-size: 14.4px; }
-  #projects .img-wrapper:hover .overlay {
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    text-align: center;
-    color: white;
-    font-size: 20px;
+#projects .img-wrapper {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; }
+  #projects .img-wrapper .overlay {
+    top: 100%;
+    height: 0px;
     transition: 0.6s;
-    opacity: 0.8; }
-  #projects .img {
-    vertical-align: top;
-    height: 100%;
-    width: 100%; }
-  #projects > section {
-    position: relative;
-    display: inline-block; }
-  #projects > section:nth-child(odd) > a {
-    border-right-width: 40px; }
-  #projects > section:nth-child(even) > a {
-    border-left-width: 40px; }
+    opacity: 0;
+    width: 100%;
+    position: absolute; }
+    #projects .img-wrapper .overlay > div {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      right: 1rem; }
+    #projects .img-wrapper .overlay > div.head {
+      font-size: 36px;
+      top: 50%;
+      position: absolute;
+      width: 100%;
+      margin-top: -2%;
+      text-align: center; }
+      #projects .img-wrapper .overlay > div.head strong {
+        font-size: 14.4px; }
+
+#projects .img-wrapper:hover .overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  transition: 0.6s;
+  opacity: 0.8; }
+
+#projects .img {
+  vertical-align: top;
+  height: 100%;
+  width: 100%; }
+
+#projects > section {
+  position: relative;
+  display: inline-block; }
+
+#projects > section:nth-child(odd) > a {
+  border-right-width: 40px; }
+
+#projects > section:nth-child(even) > a {
+  border-left-width: 40px; }

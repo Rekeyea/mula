@@ -9,23 +9,13 @@ document,
 body {
   font-size: 12px;
   font-family: "Rambla", sans-serif;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  margin-top: 0px !important; }
 
 main {
-  background-color: #f2f2f2 !important;
-  width: 100%;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  bottom: 0px; }
+  background-color: #f2f2f2 !important; }
   main .main {
-    background-color: white;
-    top: 0;
-    left: 0px;
-    bottom: 0px;
-    left: 80px;
-    right: 80px;
-    position: absolute; }
+    background-color: white; }
 
 #app-header {
   height: 8rem; }
