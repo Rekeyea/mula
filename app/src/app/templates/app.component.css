@@ -106,12 +106,12 @@ main {
 
 @media only screen and (min-width: 48rem) {
   #app-navigation ul.navigation-list li.navigation-item a.navigation-link {
-    font-size: 1.5rem; } }
+    font-size: 1rem; } }
 
 @media only screen and (min-width: 62rem) {
   #app-navigation ul.navigation-list li.navigation-item a.navigation-link {
-    font-size: 2rem; } }
+    font-size: 1.5rem; } }
 
 @media only screen and (min-width: 71rem) {
   #app-navigation ul.navigation-list li.navigation-item a.navigation-link {
-    font-size: 2rem; } }
+    font-size: 1.5rem; } }
