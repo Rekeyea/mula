@@ -13,7 +13,6 @@ body {
 
 main {
   background-color: #f2f2f2 !important;
-  height: 100%;
   width: 100%;
   position: absolute;
   top: 0px;
@@ -38,6 +37,9 @@ main {
     letter-spacing: 4px;
     font-weight: lighter; }
 
+#app-content {
+  min-height: 50vh; }
+
 #app-navigation {
   text-align: center;
   height: 7rem; }
@@ -61,7 +63,11 @@ main {
         text-align: center;
         display: block;
         font-size: 24px;
-        line-height: 3rem; }
+        line-height: 3rem;
+        color: #404045;
+        background-color: white !important; }
+      #app-navigation ul.navigation-list li.navigation-item a.navigation-link:hover {
+        background-color: #D0D0D5 !important; }
     #app-navigation ul.navigation-list li.navigation-item.active a.navigation-link {
       background-color: #404045 !important;
       color: white !important; }
@@ -70,8 +76,6 @@ main {
   margin: 0 auto;
   height: 6rem;
   padding-top: 4rem;
-  position: absolute;
-  bottom: 9rem;
   width: 100%; }
   #app-footer > div {
     margin: 0 auto;
@@ -96,7 +100,6 @@ main {
           color: #54BE9B; }
 
 #app-footer-trademark {
-  position: absolute;
   bottom: 2rem;
   left: 0px;
   right: 0px;

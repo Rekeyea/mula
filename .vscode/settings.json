@@ -4,6 +4,6 @@
         "**/.git": true,
         "**/.DS_Store": true,
         "app/**/*.js":true,
-        "**/*.css":true
+        "app/**/*.css":true
     }
 }

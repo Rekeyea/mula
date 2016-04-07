@@ -11,6 +11,9 @@
         font-weight: lighter;
     }
 }
+#app-content{
+    min-height: 50vh;
+}
 #app-navigation{
     text-align: center;
     height: 7rem;
@@ -37,6 +40,11 @@
                 display: block;
                 font-size: 2*$rem;
                 line-height: $tamano;
+                color: $negro-mula;
+                background-color: white!important;
+            }
+            a.navigation-link:hover{
+                background-color: $gris-mula!important;
             }
         }
         li.navigation-item.active {
@@ -51,8 +59,6 @@
     margin: 0 auto;
     height: 6rem;
     padding-top: 4rem;
-    position: absolute;
-    bottom: 9rem;
     width: 100%;
     >div{
         margin: 0 auto;
@@ -85,7 +91,6 @@
 }
 
 #app-footer-trademark{
-    position: absolute;
     bottom: 2rem;
     left: 0px;
     right: 0px;
