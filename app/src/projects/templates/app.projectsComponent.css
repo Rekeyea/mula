@@ -17,6 +17,9 @@ main {
   main .main {
     background-color: white; }
 
+#projects .project {
+  padding-bottom: 1rem; }
+
 #projects .img-wrapper {
   position: relative;
   display: inline-block;

@@ -39,23 +39,19 @@ main {
     #app-navigation ul.navigation-list li.navigation-item {
       display: inline-block;
       height: 1.5rem; }
-      #app-navigation ul.navigation-list li.navigation-item a.navigation-link:nth-child(1) {
-        margin-right: 0.75rem; }
-      #app-navigation ul.navigation-list li.navigation-item a.navigation-link:nth-child(3) {
-        margin-left: 0.75rem; }
       #app-navigation ul.navigation-list li.navigation-item a.navigation-link {
         height: 3rem;
         text-decoration: none;
         white-space: nowrap;
-        float: left;
-        padding-right: 0.75rem;
-        padding-left: 0.75rem;
+        padding-right: 0.8rem;
+        padding-left: 0.8rem;
         text-align: center;
         display: block;
-        font-size: 24px;
+        font-size: 1,5rem;
         line-height: 3rem;
         color: #404045;
-        background-color: white !important; }
+        background-color: white !important;
+        width: 100%; }
       #app-navigation ul.navigation-list li.navigation-item a.navigation-link:hover {
         background-color: #D0D0D5 !important; }
     #app-navigation ul.navigation-list li.navigation-item.active a.navigation-link {
@@ -107,3 +103,15 @@ main {
 
 #app-content {
   min-height: 49vh; }
+
+@media only screen and (min-width: 48rem) {
+  #app-navigation ul.navigation-list li.navigation-item a.navigation-link {
+    font-size: 1.5rem; } }
+
+@media only screen and (min-width: 62rem) {
+  #app-navigation ul.navigation-list li.navigation-item a.navigation-link {
+    font-size: 2rem; } }
+
+@media only screen and (min-width: 71rem) {
+  #app-navigation ul.navigation-list li.navigation-item a.navigation-link {
+    font-size: 2rem; } }
