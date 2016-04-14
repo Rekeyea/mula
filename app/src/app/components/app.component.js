@@ -30,18 +30,18 @@ System.register(["angular2/core", 'angular2/router', "../../projects/components/
                     this.links = [
                         {
                             active: false,
-                            name: "Somos",
-                            url: "Somos"
+                            name: "contacto",
+                            url: "Contacto"
                         },
                         {
                             active: true,
-                            name: "Proyectos",
+                            name: "proyectos",
                             url: "Proyectos"
                         },
                         {
                             active: false,
-                            name: "Contacto",
-                            url: "Contacto"
+                            name: "somos",
+                            url: "Somos"
                         }
                     ];
                     this.trademark = "mula 2016";

@@ -40,18 +40,18 @@ export class AppComponent implements IAmMainView{
     links:Array<IAmALink> = [
         {
             active:false,
-            name:"Somos",
-            url:"Somos"
+            name:"contacto",
+            url:"Contacto"
         },
         {
             active:true,
-            name:"Proyectos",
+            name:"proyectos",
             url:"Proyectos"
         },
         {
             active:false,
-            name:"Contacto",
-            url:"Contacto"
+            name:"somos",
+            url:"Somos"
         }
     ];
     trademark="mula 2016";

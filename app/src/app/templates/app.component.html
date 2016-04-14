@@ -1,17 +1,21 @@
 <main class="row center-xs">
-    <div class="main col-xs-12 col-sm-12 col-md-10 col-lg-10">
+    <div class="main col-xs-12 col-sm-12 col-md-10 col-lg-11">
         <header class="row" id="app-header">
-        <h1>
-            {{title}}
-        </h1>
+            <div class="col-sm-4">
+                <h1>
+                    {{title}}
+                </h1>    
+            </div>
+            <div class="col-sm-8">
+                <nav id="app-navigation" class="row center-xs">
+                    <ul class="navigation-list col-xs-11 col-sm-11 col-md-12 col-lg-12 row center-xs">
+                        <li class="navigation-item col-xs" *ngFor="#link of links" [ngClass]="{'active':link.active}">
+                            <a class="navigation-link" [routerLink]="[link.url]" href="" (click)="selectLink(link)">{{link.name}}</a>
+                        </li>
+                    </ul>       
+                </nav>
+            </div>
         </header>
-        <nav id="app-navigation" class="row center-xs">
-            <ul class="navigation-list col-xs-11 col-sm-11 col-md-12 col-lg-12 row center-xs">
-                <li class="navigation-item col-xs-4 col-sm-4 col-lg-2 col-md-2" *ngFor="#link of links" [ngClass]="{'active':link.active}">
-                    <a class="navigation-link" [routerLink]="[link.url]" href="" (click)="selectLink(link)">{{link.name}}</a>
-                </li>
-            </ul>       
-        </nav>
         <article id="app-content">
             <router-outlet></router-outlet>
         </article>

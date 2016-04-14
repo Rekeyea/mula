@@ -13,19 +13,20 @@ body {
   margin-top: 0px !important; }
 
 main {
-  background-color: #f2f2f2 !important; }
-  main .main {
-    background-color: white; }
+  background-color: white; }
 
 #app-header {
   height: 8rem; }
   #app-header h1 {
     color: #54BE9B !important;
-    text-align: center !important;
+    text-align: left !important;
     width: 100%;
     font-size: 3rem;
-    letter-spacing: 4px;
-    font-weight: lighter; }
+    letter-spacing: 7px;
+    font-weight: lighter;
+    height: 8rem;
+    margin: 0px;
+    line-height: 8rem; }
 
 #app-content {
   min-height: 50vh; }
@@ -35,28 +36,34 @@ main {
   height: 7rem; }
   #app-navigation ul.navigation-list {
     display: inline-block;
-    height: 1.5rem; }
+    height: 8rem; }
     #app-navigation ul.navigation-list li.navigation-item {
-      display: inline-block;
-      height: 1.5rem; }
+      display: block;
+      float: right;
+      text-decoration-style: none;
+      height: 3rem; }
       #app-navigation ul.navigation-list li.navigation-item a.navigation-link {
-        height: 3rem;
         text-decoration: none;
         white-space: nowrap;
+        height: 2.5rem;
+        margin-top: 2rem;
         padding-right: 0.8rem;
         padding-left: 0.8rem;
         text-align: center;
         display: block;
         font-size: 1rem;
-        line-height: 3rem;
+        line-height: 2.5rem;
         color: #404045;
         background-color: white !important;
-        width: 100%; }
-      #app-navigation ul.navigation-list li.navigation-item a.navigation-link:hover {
-        background-color: #D0D0D5 !important; }
+        width: 100%;
+        letter-spacing: 7px;
+        border-width: 3px;
+        border-style: solid;
+        border-color: white; }
+    #app-navigation ul.navigation-list li.navigation-item:not(.active) a.navigation-link:hover {
+      color: #54BE9B !important; }
     #app-navigation ul.navigation-list li.navigation-item.active a.navigation-link {
-      background-color: #404045 !important;
-      color: white !important; }
+      border-color: #54BE9B; }
 
 #app-footer {
   margin: 0 auto;

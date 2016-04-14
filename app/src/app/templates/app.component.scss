@@ -6,11 +6,14 @@
     height: 8rem;
     h1{
         color: $verde-mula!important;
-        text-align: center!important;
+        text-align: left!important;
         width: 100%;
         font-size: $tamano;
         letter-spacing: $espacio-de-letra-titulo;
         font-weight: lighter;
+        height: 8rem;
+        margin: 0px;
+        line-height: 8rem;
     }
 }
 #app-content{
@@ -21,33 +24,41 @@
     height: 7rem;
     ul.navigation-list{
         display: inline-block;
-        height: $tamano/2;
+        height: 8rem;
         li.navigation-item{
-            display: inline-block;
-            height: $tamano/2;
+            display: block;
+            float: right;
+            text-decoration-style: none;
+            height: 3rem;
             a.navigation-link{
-                height: $tamano;
                 text-decoration: none;
                 white-space: nowrap;
-                // float: left;
+                height: 2.5rem;
+                margin-top: 2rem;
                 padding-right:0.8rem;
                 padding-left: 0.8rem;
                 text-align: center;
                 display: block;
                 font-size: 1rem;
-                line-height: $tamano;
+                line-height: 2.5rem;
                 color: $negro-mula;
                 background-color: white!important;
                 width: 100%;
+                letter-spacing: $espacio-de-letra-titulo;
+                border-width: 3px;
+                border-style: solid;
+                border-color: white;
             }
+        }
+        
+        li.navigation-item:not(.active){
             a.navigation-link:hover{
-                background-color: $gris-mula!important;
+                color: $verde-mula!important;
             }
         }
         li.navigation-item.active {
             a.navigation-link{
-                background-color: $negro-mula!important;
-                color: white!important;
+                border-color: $verde-mula;
             }
         }
     }
