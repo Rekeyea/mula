@@ -36,6 +36,7 @@ import {Proyectos} from "../../projects/components/app.projectsComponent"
 })
 
 export class AppComponent implements IAmMainView{
+    opened=false;
     title = "mula";
     links:Array<IAmALink> = [
         {
@@ -74,5 +75,8 @@ export class AppComponent implements IAmMainView{
     ];
     selectLink = function(link: IAmALink){
         console.log(link.url);
+    };
+    toggleCollapse=function(){
+        this.opened=!this.opened;
     };
 }

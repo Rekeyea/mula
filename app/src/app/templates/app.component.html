@@ -1,12 +1,22 @@
 <main class="row center-xs">
     <div class="main col-xs-12 col-sm-12 col-md-10 col-lg-11">
+        <header id="mobile-bar" [ngClass]="{'menu-collapsed':!opened,'menu-expanded':opened}" (click)="toggleCollapse()">
+            <div class="bar"></div>
+            <nav>
+                <ul>
+                    <li *ngFor="#link of links" [ngClass]="{'active':link.active}">
+                        <a [routerLink]="[link.url]" href="" (click)="selectLink(link)">{{link.name}}</a>
+                    </li>
+                </ul>       
+            </nav>
+        </header>
         <header class="row" id="app-header">
-            <div class="col-sm-4">
+            <div class="col-md-4 col-xs-12">
                 <h1>
                     {{title}}
                 </h1>    
             </div>
-            <div class="col-sm-8">
+            <div class="col-xs-8 nav">
                 <nav id="app-navigation" class="row center-xs">
                     <ul class="navigation-list col-xs-11 col-sm-11 col-md-12 col-lg-12 row center-xs">
                         <li class="navigation-item col-xs" *ngFor="#link of links" [ngClass]="{'active':link.active}">

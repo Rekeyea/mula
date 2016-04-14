@@ -26,6 +26,7 @@ System.register(["angular2/core", 'angular2/router', "../../projects/components/
         execute: function() {
             AppComponent = (function () {
                 function AppComponent() {
+                    this.opened = false;
                     this.title = "mula";
                     this.links = [
                         {
@@ -64,6 +65,9 @@ System.register(["angular2/core", 'angular2/router', "../../projects/components/
                     ];
                     this.selectLink = function (link) {
                         console.log(link.url);
+                    };
+                    this.toggleCollapse = function () {
+                        this.opened = !this.opened;
                     };
                 }
                 AppComponent = __decorate([

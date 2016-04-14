@@ -1,12 +1,114 @@
 @import "../../../app.scss";
 
 
+    .menu-collapsed {
+        transition:all .25s;
+        position:fixed;
+        top:1rem;
+        right: 1rem;
+        height:36px;
+        width:36px;
+        z-index:1;
+        cursor:pointer;
+        ul {
+            transition:all .05s;
+            position:fixed;
+            left:-9000px;
+        }
+    }
+    .bar {
+        position:fixed;
+        right:1rem;
+        top:2rem;
+        height:6px;
+        width:30px;
+        border-radius:15px;
+        background-color:$verde-mula;
+        &:before {
+            transition:all .25s;
+            content:"";
+            position:absolute;
+            left:0;
+            top:-8px;
+            height:6px;
+            width:30px;
+            border-radius:15px;
+            background-color:$verde-mula;
+        }
+        &:after {
+            transition:all .25s;
+            content:"";
+            position:absolute;
+            left:0;
+            top:8px;
+            height:6px;
+            width:30px;
+            border-radius:15px;
+            background-color:$verde-mula;
+        }
+    }
+    .menu-expanded {
+        transition:all .25s;
+        text-align:center;
+        line-height:200px;
+        height:100%;
+        width:100%;
+        border-radius:0px;
+        top:0;
+        right:0;
+        bottom: 0;
+        right: 0;
+        position: fixed;
+        background-color:$verde-mula;
+        z-index: 1000;
+        opacity: 1;
+        ul {
+            transition:all .05s;
+            position:relative;
+            left:0;
+            z-index:2;
+            list-style: none;
+            padding-left: 0px!important;
+        }
+        a {
+            transition:all .15s;
+            text-decoration:none;
+            color:white;
+            font-size:2em;
+            padding:5px;
+            &:hover {
+                transition:all .15s;
+                letter-spacing:2px;
+                border:1px solid rgba(255,255,255,.15);
+            }
+        }
+        .bar {
+            background-color:transparent;
+            transition:all .25s;
+            &:before {
+                transition:all .25s;
+                content:"";
+                transform:rotate(45deg);
+                top:-0px;
+                background-color: white!important;
+            }
+            &:after {
+                transition:all .25s;
+                content:"";
+                transform:rotate(-45deg);
+                top:0px;
+                background-color: white!important;
+            }
+        }
+    }
+
+
 
 #app-header{
     height: 8rem;
     h1{
         color: $verde-mula!important;
-        text-align: left!important;
+        text-align: center!important;
         width: 100%;
         font-size: $tamano;
         letter-spacing: $espacio-de-letra-titulo;
@@ -14,6 +116,9 @@
         height: 8rem;
         margin: 0px;
         line-height: 8rem;
+    }
+    .nav{
+        display: none;
     }
 }
 #app-content{
@@ -121,6 +226,7 @@
 }
 
 
+
 @media only screen and (min-width:$sm){
     #app-navigation{
         ul.navigation-list{
@@ -134,6 +240,17 @@
 }
 
 @media only screen and (min-width:$md){
+    #app-header{
+        h1{
+            text-align: left!important;
+        }
+        .nav{
+            display: initial;
+        }
+    }
+    #mobileBar{
+        display: none;
+    }
     #app-navigation{
         ul.navigation-list{
             li.navigation-item{
@@ -146,6 +263,17 @@
 }
 
 @media only screen and (min-width:$lg){
+    #app-header{
+        h1{
+            text-align: left!important;
+        }
+        .nav{
+            display: initial;
+        }
+    }
+    #mobileBar{
+        display: none;
+    }
     #app-navigation{
         ul.navigation-list{
             li.navigation-item{

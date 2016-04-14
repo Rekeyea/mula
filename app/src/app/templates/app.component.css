@@ -15,11 +15,102 @@ body {
 main {
   background-color: white; }
 
+.menu-collapsed {
+  transition: all .25s;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  height: 36px;
+  width: 36px;
+  z-index: 1;
+  cursor: pointer; }
+  .menu-collapsed ul {
+    transition: all .05s;
+    position: fixed;
+    left: -9000px; }
+
+.bar {
+  position: fixed;
+  right: 1rem;
+  top: 2rem;
+  height: 6px;
+  width: 30px;
+  border-radius: 15px;
+  background-color: #54BE9B; }
+  .bar:before {
+    transition: all .25s;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -8px;
+    height: 6px;
+    width: 30px;
+    border-radius: 15px;
+    background-color: #54BE9B; }
+  .bar:after {
+    transition: all .25s;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    height: 6px;
+    width: 30px;
+    border-radius: 15px;
+    background-color: #54BE9B; }
+
+.menu-expanded {
+  transition: all .25s;
+  text-align: center;
+  line-height: 200px;
+  height: 100%;
+  width: 100%;
+  border-radius: 0px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  background-color: #54BE9B;
+  z-index: 1000;
+  opacity: 1; }
+  .menu-expanded ul {
+    transition: all .05s;
+    position: relative;
+    left: 0;
+    z-index: 2;
+    list-style: none;
+    padding-left: 0px !important; }
+  .menu-expanded a {
+    transition: all .15s;
+    text-decoration: none;
+    color: white;
+    font-size: 2em;
+    padding: 5px; }
+    .menu-expanded a:hover {
+      transition: all .15s;
+      letter-spacing: 2px;
+      border: 1px solid rgba(255, 255, 255, 0.15); }
+  .menu-expanded .bar {
+    background-color: transparent;
+    transition: all .25s; }
+    .menu-expanded .bar:before {
+      transition: all .25s;
+      content: "";
+      transform: rotate(45deg);
+      top: -0px;
+      background-color: white !important; }
+    .menu-expanded .bar:after {
+      transition: all .25s;
+      content: "";
+      transform: rotate(-45deg);
+      top: 0px;
+      background-color: white !important; }
+
 #app-header {
   height: 8rem; }
   #app-header h1 {
     color: #54BE9B !important;
-    text-align: left !important;
+    text-align: center !important;
     width: 100%;
     font-size: 3rem;
     letter-spacing: 7px;
@@ -27,6 +118,8 @@ main {
     height: 8rem;
     margin: 0px;
     line-height: 8rem; }
+  #app-header .nav {
+    display: none; }
 
 #app-content {
   min-height: 50vh; }
@@ -116,9 +209,21 @@ main {
     font-size: 1rem; } }
 
 @media only screen and (min-width: 62rem) {
+  #app-header h1 {
+    text-align: left !important; }
+  #app-header .nav {
+    display: initial; }
+  #mobileBar {
+    display: none; }
   #app-navigation ul.navigation-list li.navigation-item a.navigation-link {
     font-size: 1.5rem; } }
 
 @media only screen and (min-width: 71rem) {
+  #app-header h1 {
+    text-align: left !important; }
+  #app-header .nav {
+    display: initial; }
+  #mobileBar {
+    display: none; }
   #app-navigation ul.navigation-list li.navigation-item a.navigation-link {
     font-size: 1.5rem; } }
