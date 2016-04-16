@@ -14,12 +14,6 @@ $md: 62rem;
 $lg: 71rem;
 
 
-#loading{
-    background-color: black;
-    color: white;
-    font-size: 1.2*$rem;
-}
-
 html,
 document,
 body{
@@ -32,19 +26,6 @@ body{
 }
 
 main{
-    background-color: white;
-    // width: 100%;
-    // position: absolute;
-    //top:0px;
-    // left:0px;
-    // bottom: 0px;
-    .main{
-        
-        // top:0;
-        // left:0px;
-        // bottom: 0px;
-        // left:4*$espacio;
-        // right:4*$espacio;
-        // position: absolute;
-    }
+    background-color: white;   
+    min-height: 100vh; 
 }

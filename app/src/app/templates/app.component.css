@@ -1,9 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Rambla);
-#loading {
-  background-color: black;
-  color: white;
-  font-size: 14.4px; }
-
 html,
 document,
 body {
@@ -13,7 +8,8 @@ body {
   margin-top: 0px !important; }
 
 main {
-  background-color: white; }
+  background-color: white;
+  min-height: 100vh; }
 
 .menu-collapsed {
   transition: all .25s;
@@ -159,20 +155,14 @@ main {
       border-color: #54BE9B; }
 
 #app-footer {
-  margin: 0 auto;
-  height: 6rem;
-  padding-top: 4rem;
-  width: 100%; }
-  #app-footer > div {
-    margin: 0 auto;
-    text-align: center; }
-    #app-footer > div > div {
-      display: inline-block;
-      padding-left: 1rem;
-      padding-right: 1rem; }
-      #app-footer > div > div i {
-        font-size: 2rem;
-        color: #54BE9B; }
+  padding-top: 4rem; }
+  #app-footer > div > div {
+    display: inline-block;
+    padding-left: 1rem;
+    padding-right: 1rem; }
+    #app-footer > div > div i {
+      font-size: 2.5rem;
+      color: #54BE9B; }
   #app-footer > .app-footer {
     width: 12rem;
     position: absolute; }
@@ -182,7 +172,7 @@ main {
       #app-footer > .app-footer > div > div {
         display: inline-block; }
         #app-footer > .app-footer > div > div i {
-          font-size: 2rem;
+          font-size: 2.5rem;
           color: #54BE9B; }
 
 #app-footer-trademark {

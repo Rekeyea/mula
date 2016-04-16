@@ -9,28 +9,28 @@
         <link rel="stylesheet" href="bower_components/flexboxgrid/css/flexboxgrid.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link href='https://fonts.googleapis.com/css?family=Rambla' rel='stylesheet' type='text/css'>
-        <style>
-            body{
-                margin-top: 0px;
-                overflow-x: hidden;
-            }
-        </style>
+        <link rel="stylesheet" href="/app/first.css">
     </head>
     <body>
         <mula-app>
             <div id="loading">
-                Loading ...
+                <div class="loader">
+                    <img src="/icons/apple-icon-precomposed.png" alt="mula">
+                    <div>descargando la creatividad</div>
+                </div>
             </div>
         </mula-app>
         <script src="node_modules/es6-shim/es6-shim.min.js"></script>
         <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
-        <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>   
+        <script src="node_modules/angular2/es6/prod/src/testing/shims_for_IE.js"></script>   
 
-        <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+        <script src="node_modules/angular2/bundles/angular2-polyfills.min.js"></script>
         <script src="node_modules/systemjs/dist/system.src.js"></script>
         <script src="node_modules/rxjs/bundles/Rx.js"></script>
         <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
         <script src="node_modules/angular2/bundles/router.dev.js"></script>
+        <!--<script src="node_modules/angular2/bundles/angular2.min.js"></script>
+        <script src="node_modules/angular2/bundles/router.min.js"></script>-->
         <script>
             System.config({
                 packages: {        

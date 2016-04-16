@@ -1,9 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Rambla);
-#loading {
-  background-color: black;
-  color: white;
-  font-size: 14.4px; }
-
 html,
 document,
 body {
@@ -13,7 +8,8 @@ body {
   margin-top: 0px !important; }
 
 main {
-  background-color: white; }
+  background-color: white;
+  min-height: 100vh; }
 
 #projects .project {
   padding-bottom: 1rem; }
