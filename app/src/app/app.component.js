@@ -1,4 +1,4 @@
-System.register(["angular2/core", 'angular2/router', "../proyectos/app.projectRoutingComponent", "../nosotros/app.aboutComponent", "../contacto/app.contactComponent"], function(exports_1, context_1) {
+System.register(["angular2/core", 'angular2/router', "../../common/services/links.service", "../proyectos/app.projectRoutingComponent", "../nosotros/app.aboutComponent", "../contacto/app.contactComponent"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(["angular2/core", 'angular2/router', "../proyectos/app.projectRo
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, app_projectRoutingComponent_1, app_aboutComponent_1, app_contactComponent_1;
+    var core_1, router_1, links_service_1, app_projectRoutingComponent_1, app_aboutComponent_1, app_contactComponent_1;
     var AppComponent;
     return {
         setters:[
@@ -19,6 +19,9 @@ System.register(["angular2/core", 'angular2/router', "../proyectos/app.projectRo
             },
             function (router_1_1) {
                 router_1 = router_1_1;
+            },
+            function (links_service_1_1) {
+                links_service_1 = links_service_1_1;
             },
             function (app_projectRoutingComponent_1_1) {
                 app_projectRoutingComponent_1 = app_projectRoutingComponent_1_1;
@@ -31,27 +34,12 @@ System.register(["angular2/core", 'angular2/router', "../proyectos/app.projectRo
             }],
         execute: function() {
             AppComponent = (function () {
-                function AppComponent(router) {
+                function AppComponent(router, service) {
                     this.router = router;
+                    this.service = service;
                     this.opened = false;
                     this.title = "mula";
-                    this.links = [
-                        {
-                            active: false,
-                            name: "Somos",
-                            url: "Somos"
-                        },
-                        {
-                            active: true,
-                            name: "Proyectos",
-                            url: "Proyectos"
-                        },
-                        {
-                            active: false,
-                            name: "Contacto",
-                            url: "Contacto"
-                        }
-                    ];
+                    this.links = this.service.links;
                     this.trademark = "mula 2016";
                     this.socialIcons = [
                         {
@@ -71,7 +59,8 @@ System.register(["angular2/core", 'angular2/router', "../proyectos/app.projectRo
                         }
                     ];
                     this.selectLink = function (link) {
-                        console.log(link.url);
+                        this.service.unselectLinks();
+                        this.service.selectLink(link);
                     };
                     this.toggleCollapse = function () {
                         this.opened = !this.opened;
@@ -117,9 +106,9 @@ System.register(["angular2/core", 'angular2/router', "../proyectos/app.projectRo
                         templateUrl: "app/src/app/app.component.html",
                         styleUrls: ["app/src/app/app.component.css"],
                         directives: [router_1.ROUTER_DIRECTIVES],
-                        providers: [router_1.ROUTER_PROVIDERS]
+                        providers: [router_1.ROUTER_PROVIDERS, links_service_1.LinksService]
                     }), 
-                    __metadata('design:paramtypes', [router_1.Router])
+                    __metadata('design:paramtypes', [router_1.Router, links_service_1.LinksService])
                 ], AppComponent);
                 return AppComponent;
             }());

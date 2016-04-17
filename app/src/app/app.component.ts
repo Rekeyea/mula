@@ -3,6 +3,7 @@ import {Router, RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular
 import {IAmMainView} from "../../types/view";
 import {IAmALink} from "../../types/link";
 import {IAmSocialIcon} from "../../types/social";
+import {LinksService} from "../../common/services/links.service";
 import {ProjectCenterComponent} from "../proyectos/app.projectRoutingComponent";
 import {AboutComponent} from "../nosotros/app.aboutComponent";
 import {ContactComponent} from "../contacto/app.contactComponent";
@@ -38,29 +39,13 @@ import {ContactComponent} from "../contacto/app.contactComponent";
     templateUrl:"app/src/app/app.component.html",
     styleUrls:["app/src/app/app.component.css"],
     directives:[ROUTER_DIRECTIVES],
-    providers:[ROUTER_PROVIDERS]
+    providers:[ROUTER_PROVIDERS,LinksService]
 })
 
 export class AppComponent implements IAmMainView{
     opened=false;
     title = "mula";
-    links:Array<IAmALink> = [
-        {
-            active:false,
-            name:"Somos",
-            url:"Somos"
-        },
-        {
-            active:true,
-            name:"Proyectos",
-            url:"Proyectos"
-        },
-        {
-            active:false,
-            name:"Contacto",
-            url:"Contacto"
-        }
-    ];
+    links:Array<IAmALink> = this.service.links;
     trademark="mula 2016";
     socialIcons:Array<IAmSocialIcon>=[
         {
@@ -79,14 +64,16 @@ export class AppComponent implements IAmMainView{
             url:"https://www.instagram.com/SomosMula"
         }
     ];
+    
     selectLink = function(link: IAmALink){
-        console.log(link.url);
+        this.service.unselectLinks();
+        this.service.selectLink(link);
     };
     toggleCollapse=function(){
         this.opened=!this.opened;
     };
     
-    constructor(private router: Router) {
+    constructor(private router: Router,private service: LinksService) {
 		this.setUpEvents();
 	}
 

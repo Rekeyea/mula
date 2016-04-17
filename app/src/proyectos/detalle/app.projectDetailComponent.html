@@ -1,5 +1,14 @@
 <!--<div>
     {{Project.name}}
 </div>-->
-
-<h1>Detalle</h1>
+<h1>{{project.title}}</h1>   
+<div class="row center-xs">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <p>{{project.description}}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12" *ngFor="#img of project.images">
+        <img src="{{img}}"/>
+    </div>
+</div>

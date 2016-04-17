@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/router', "../proyectos/listado/app.projectsComponent", "../proyectos/detalle/app.projectDetailComponent"], function(exports_1, context_1) {
+System.register(['angular2/core', 'angular2/router', "../proyectos/listado/app.projectsComponent", "../proyectos/detalle/app.projectDetailComponent", "../../common/services/project.service"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', 'angular2/router', "../proyectos/listado/app.p
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, app_projectsComponent_1, app_projectDetailComponent_1;
+    var core_1, router_1, app_projectsComponent_1, app_projectDetailComponent_1, project_service_1;
     var ProjectCenterComponent;
     return {
         setters:[
@@ -25,6 +25,9 @@ System.register(['angular2/core', 'angular2/router', "../proyectos/listado/app.p
             },
             function (app_projectDetailComponent_1_1) {
                 app_projectDetailComponent_1 = app_projectDetailComponent_1_1;
+            },
+            function (project_service_1_1) {
+                project_service_1 = project_service_1_1;
             }],
         execute: function() {
             ProjectCenterComponent = (function () {
@@ -33,7 +36,8 @@ System.register(['angular2/core', 'angular2/router', "../proyectos/listado/app.p
                 ProjectCenterComponent = __decorate([
                     core_1.Component({
                         templateUrl: "app/src/proyectos/app.projectRouting.html",
-                        directives: [router_1.RouterOutlet]
+                        directives: [router_1.RouterOutlet],
+                        providers: [project_service_1.ProjectService]
                     }),
                     router_1.RouteConfig([
                         { path: '/', name: 'Proyectos', component: app_projectsComponent_1.Proyectos, useAsDefault: true },

@@ -24,8 +24,8 @@ System.register(["angular2/core"], function(exports_1, context_1) {
                 ContactComponent = __decorate([
                     core_1.Component({
                         selector: "mula-app",
-                        templateUrl: "app/src/contact/templates/app.contactComponent.html",
-                        styleUrls: ["app/src/contact/templates/app.contactComponent.css"],
+                        templateUrl: "app/src/contacto/app.contactComponent.html",
+                        styleUrls: ["app/src/contacto/app.contactComponent.css"],
                     }), 
                     __metadata('design:paramtypes', [])
                 ], ContactComponent);

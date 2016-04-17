@@ -1,4 +1,4 @@
-System.register(["angular2/core", "angular2/router", "../../../common/services/project.service"], function(exports_1, context_1) {
+System.register(["angular2/core", "angular2/router", "../../../common/services/project.service", "../../../common/services/links.service"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(["angular2/core", "angular2/router", "../../../common/services/p
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, project_service_1;
+    var core_1, router_1, project_service_1, links_service_1;
     var Proyectos;
     return {
         setters:[
@@ -22,11 +22,15 @@ System.register(["angular2/core", "angular2/router", "../../../common/services/p
             },
             function (project_service_1_1) {
                 project_service_1 = project_service_1_1;
+            },
+            function (links_service_1_1) {
+                links_service_1 = links_service_1_1;
             }],
         execute: function() {
             Proyectos = (function () {
-                function Proyectos(_projectService) {
+                function Proyectos(_projectService, _linksService) {
                     this._projectService = _projectService;
+                    this._linksService = _linksService;
                 }
                 Proyectos.prototype.ngOnInit = function () {
                     var _this = this;
@@ -39,10 +43,10 @@ System.register(["angular2/core", "angular2/router", "../../../common/services/p
                         selector: "mula-listado-proyectos",
                         templateUrl: "app/src/proyectos/listado/app.projectsComponent.html",
                         styleUrls: ["app/src/proyectos/listado/app.projectsComponent.css"],
-                        providers: [project_service_1.ProjectService],
+                        providers: [project_service_1.ProjectService, links_service_1.LinksService],
                         directives: [router_1.RouterLink]
                     }), 
-                    __metadata('design:paramtypes', [project_service_1.ProjectService])
+                    __metadata('design:paramtypes', [project_service_1.ProjectService, links_service_1.LinksService])
                 ], Proyectos);
                 return Proyectos;
             }());
