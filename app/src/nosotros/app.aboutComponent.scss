@@ -1,0 +1,14 @@
+@import "../../app.scss";
+
+p{
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+@media only screen and (min-width:$lg){
+    white-space: pre;
+}
+
+@media only screen and (min-width:$md){
+    white-space: pre;
+}

@@ -30,7 +30,7 @@ System.register(["angular2/core", "./mock.projects"], function(exports_1, contex
                 ProjectService.prototype.getProject = function (id) {
                     var index = mock_projects_1.PROJECTS.map(function (x) { return x.id; }).indexOf(id);
                     var p = mock_projects_1.PROJECTS[index];
-                    return new Promise(function (resolve) { return setTimeout(resolve(p)); }, 100);
+                    return new Promise(function (resolve) { return setTimeout(resolve(p), 100); });
                 };
                 ProjectService.prototype.mapServerProject = function (serverProject) {
                     return serverProject;

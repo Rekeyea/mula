@@ -1,0 +1,22 @@
+@import url(https://fonts.googleapis.com/css?family=Rambla);
+html,
+document,
+body {
+  font-size: 12px;
+  font-family: "Rambla", sans-serif;
+  overflow-x: hidden;
+  margin-top: 0px !important; }
+
+main {
+  background-color: white;
+  min-height: 100vh; }
+
+p {
+  font-size: 1.5rem;
+  width: 100%; }
+
+@media only screen and (min-width: 71rem) {
+  white-space: pre; }
+
+@media only screen and (min-width: 62rem) {
+  white-space: pre; }

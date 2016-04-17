@@ -20,6 +20,7 @@ System.register(["angular2/core"], function(exports_1, context_1) {
         execute: function() {
             AboutComponent = (function () {
                 function AboutComponent() {
+                    this.description = "\n        Somos Sof\u00EDa y Carolina y juntas creamos mula, un estudio de dise\u00F1o de comunicaci\u00F3n visual.\n        Desarrollamos ideas, conceptos y dise\u00F1os. La comunicaci\u00F3n visual es la pieza clave para realzar el valor de las marcas.\n        Te proponemos crear juntos una estrategia a la medida de tus necesidades.\n        \n        Servicios: Identidad corporativa, folletos, afiches, cat\u00E1logos, revistas, tarjeter\u00EDa, packaging, dise\u00F1o web,\n        communication management y eventos.\n    ";
                 }
                 AboutComponent = __decorate([
                     core_1.Component({
