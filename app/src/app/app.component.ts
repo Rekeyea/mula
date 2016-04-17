@@ -1,36 +1,42 @@
 import {Component} from "angular2/core";
-import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
-import {IAmMainView} from "../types/view";
-import {IAmALink} from "../types/link";
-import {IAmSocialIcon} from "../types/social";
-import {Proyectos} from "../../projects/components/app.projectsComponent"
-
+import {Router, RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
+import {IAmMainView} from "../../types/view";
+import {IAmALink} from "../../types/link";
+import {IAmSocialIcon} from "../../types/social";
+import {ProjectCenterComponent} from "../proyectos/app.projectRoutingComponent";
+import {AboutComponent} from "../nosotros/app.aboutComponent";
+import {ContactComponent} from "../contacto/app.contactComponent";
 
 
 @RouteConfig([
     {
-        path:"/proyectos",
+        path:"/proyectos/...",
         name:"Proyectos",
-        component:Proyectos,
+        component:ProjectCenterComponent,
         useAsDefault:true
     },
     {
         path:"/somos",
         name:"Somos",
-        component:Proyectos,
+        component:AboutComponent,
         useAsDefault:false
+        
     },
     {
         path:"/contacto",
         name:"Contacto",
-        component:Proyectos,
+        component:ContactComponent,
         useAsDefault:false
+    },
+    {//cualquier ruta desconocida va a Proyectos 
+        path: '/**', 
+        redirectTo: ['Proyectos'] 
     }
 ])
 @Component({
     selector:"mula-app",
-    templateUrl:"app/src/app/templates/app.component.html",
-    styleUrls:["app/src/app/templates/app.component.css"],
+    templateUrl:"app/src/app/app.component.html",
+    styleUrls:["app/src/app/app.component.css"],
     directives:[ROUTER_DIRECTIVES],
     providers:[ROUTER_PROVIDERS]
 })
@@ -41,18 +47,18 @@ export class AppComponent implements IAmMainView{
     links:Array<IAmALink> = [
         {
             active:false,
-            name:"contacto",
-            url:"Contacto"
+            name:"Somos",
+            url:"Somos"
         },
         {
             active:true,
-            name:"proyectos",
+            name:"Proyectos",
             url:"Proyectos"
         },
         {
             active:false,
-            name:"somos",
-            url:"Somos"
+            name:"Contacto",
+            url:"Contacto"
         }
     ];
     trademark="mula 2016";
@@ -79,4 +85,18 @@ export class AppComponent implements IAmMainView{
     toggleCollapse=function(){
         this.opened=!this.opened;
     };
+    
+    constructor(private router: Router) {
+		this.setUpEvents();
+	}
+
+	private setUpEvents(): void {
+		this.router.subscribe((value: any) => this.onNext(value));
+	}
+
+	private onNext(value: any): void {
+        //uncomment to get the stacktrace
+        //throw new Exception(""); 
+        console.log(value);
+	}
 }

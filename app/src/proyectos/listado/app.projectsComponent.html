@@ -1,6 +1,6 @@
 <section class="row" id="projects">
     <section class="col-xs-12 col-md-6 col-sm-6 col-lg-6 project" *ngFor="#project of projects">
-        <a href="#">
+        <a [routerLink]="['ProyectoDetalle',{id:project.id}]">
             <div class="img-wrapper">
                 <img class="img" src="{{project.mainImage}}" />
                 <div class="overlay">

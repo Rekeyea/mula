@@ -1,4 +1,4 @@
-@import "../../../app.scss";
+@import "../../app.scss";
 
 
     .menu-collapsed {
@@ -123,6 +123,7 @@
 }
 #app-content{
     min-height: 50vh;
+    padding-top: 4rem;
 }
 #app-navigation{
     text-align: center;

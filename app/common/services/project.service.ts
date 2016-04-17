@@ -1,5 +1,5 @@
 import {Injectable} from "angular2/core";
-import {IAmAProject} from "../../src/projects/types/project";
+import {IAmAProject} from "../../types/project";
 import {PROJECTS} from "./mock.projects";
 
 @Injectable()

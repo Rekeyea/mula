@@ -1,4 +1,4 @@
-import {IAmAProject} from "../../src/projects/types/project"
+import {IAmAProject} from "../../types/project";
 
 export var PROJECTS:Array<IAmAProject>=[
     {

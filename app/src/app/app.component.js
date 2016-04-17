@@ -1,4 +1,4 @@
-System.register(["angular2/core", 'angular2/router', "../../projects/components/app.projectsComponent"], function(exports_1, context_1) {
+System.register(["angular2/core", 'angular2/router', "../proyectos/app.projectRoutingComponent", "../nosotros/app.aboutComponent", "../contacto/app.contactComponent"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(["angular2/core", 'angular2/router', "../../projects/components/
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, app_projectsComponent_1;
+    var core_1, router_1, app_projectRoutingComponent_1, app_aboutComponent_1, app_contactComponent_1;
     var AppComponent;
     return {
         setters:[
@@ -20,29 +20,36 @@ System.register(["angular2/core", 'angular2/router', "../../projects/components/
             function (router_1_1) {
                 router_1 = router_1_1;
             },
-            function (app_projectsComponent_1_1) {
-                app_projectsComponent_1 = app_projectsComponent_1_1;
+            function (app_projectRoutingComponent_1_1) {
+                app_projectRoutingComponent_1 = app_projectRoutingComponent_1_1;
+            },
+            function (app_aboutComponent_1_1) {
+                app_aboutComponent_1 = app_aboutComponent_1_1;
+            },
+            function (app_contactComponent_1_1) {
+                app_contactComponent_1 = app_contactComponent_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
-                function AppComponent() {
+                function AppComponent(router) {
+                    this.router = router;
                     this.opened = false;
                     this.title = "mula";
                     this.links = [
                         {
                             active: false,
-                            name: "contacto",
-                            url: "Contacto"
+                            name: "Somos",
+                            url: "Somos"
                         },
                         {
                             active: true,
-                            name: "proyectos",
+                            name: "Proyectos",
                             url: "Proyectos"
                         },
                         {
                             active: false,
-                            name: "somos",
-                            url: "Somos"
+                            name: "Contacto",
+                            url: "Contacto"
                         }
                     ];
                     this.trademark = "mula 2016";
@@ -69,36 +76,50 @@ System.register(["angular2/core", 'angular2/router', "../../projects/components/
                     this.toggleCollapse = function () {
                         this.opened = !this.opened;
                     };
+                    this.setUpEvents();
                 }
+                AppComponent.prototype.setUpEvents = function () {
+                    var _this = this;
+                    this.router.subscribe(function (value) { return _this.onNext(value); });
+                };
+                AppComponent.prototype.onNext = function (value) {
+                    //uncomment to get the stacktrace
+                    //throw new Exception(""); 
+                    console.log(value);
+                };
                 AppComponent = __decorate([
                     router_1.RouteConfig([
                         {
-                            path: "/proyectos",
+                            path: "/proyectos/...",
                             name: "Proyectos",
-                            component: app_projectsComponent_1.Proyectos,
+                            component: app_projectRoutingComponent_1.ProjectCenterComponent,
                             useAsDefault: true
                         },
                         {
                             path: "/somos",
                             name: "Somos",
-                            component: app_projectsComponent_1.Proyectos,
+                            component: app_aboutComponent_1.AboutComponent,
                             useAsDefault: false
                         },
                         {
                             path: "/contacto",
                             name: "Contacto",
-                            component: app_projectsComponent_1.Proyectos,
+                            component: app_contactComponent_1.ContactComponent,
                             useAsDefault: false
+                        },
+                        {
+                            path: '/**',
+                            redirectTo: ['Proyectos']
                         }
                     ]),
                     core_1.Component({
                         selector: "mula-app",
-                        templateUrl: "app/src/app/templates/app.component.html",
-                        styleUrls: ["app/src/app/templates/app.component.css"],
+                        templateUrl: "app/src/app/app.component.html",
+                        styleUrls: ["app/src/app/app.component.css"],
                         directives: [router_1.ROUTER_DIRECTIVES],
                         providers: [router_1.ROUTER_PROVIDERS]
                     }), 
-                    __metadata('design:paramtypes', [])
+                    __metadata('design:paramtypes', [router_1.Router])
                 ], AppComponent);
                 return AppComponent;
             }());

@@ -1,12 +1,15 @@
 import {Component,OnInit} from "angular2/core";
+import {RouterLink} from "angular2/router";
 import {ProjectService} from "../../../common/services/project.service";
-import {IAmAProject} from "../types/project"
+import {IAmAProject} from "../../../types/project";
+
 
 @Component({
-    selector:"mula-proyectos",
-    templateUrl:"app/src/projects/templates/app.projectsComponent.html",
+    selector:"mula-listado-proyectos",
+    templateUrl:"app/src/proyectos/listado/app.projectsComponent.html",
+    styleUrls:["app/src/proyectos/listado/app.projectsComponent.css"],
     providers:[ProjectService],
-    styleUrls:["app/src/projects/templates/app.projectsComponent.css"]
+    directives:[RouterLink]
 })
 export class Proyectos implements OnInit{
     
