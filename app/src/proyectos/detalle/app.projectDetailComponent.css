@@ -1,5 +1,35 @@
+@import url(https://fonts.googleapis.com/css?family=Rambla);
+html,
+document,
+body {
+  font-size: 12px;
+  font-family: "Rambla", sans-serif;
+  overflow-x: hidden;
+  margin-top: 0px !important; }
+
+main {
+  background-color: white;
+  min-height: 100vh; }
+
 h1 {
-  font-size: 2rem; }
+  font-size: 2rem;
+  color: #6B6B6B;
+  text-align: left; }
+
+.desc {
+  padding-top: 1rem;
+  border-top-color: #6B6B6B;
+  border-top-style: solid;
+  border-top-width: 2px;
+  padding-bottom: 1rem;
+  border-bottom-color: #6B6B6B;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  margin-bottom: 2rem; }
+  .desc p {
+    text-align: left;
+    letter-spacing: 0.1rem;
+    font-size: 1.4rem; }
 
 img {
   width: 100%; }

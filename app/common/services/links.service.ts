@@ -6,17 +6,17 @@ export class LinksService{
     public links:Array<IAmALink> = [
         {
             active:false,
-            name:"Somos",
+            name:"somos",
             url:"Somos"
         },
         {
             active:true,
-            name:"Proyectos",
+            name:"proyectos",
             url:"Proyectos"
         },
         {
             active:false,
-            name:"Contacto",
+            name:"contacto",
             url:"Contacto"
         }
     ];

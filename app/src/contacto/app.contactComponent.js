@@ -20,6 +20,10 @@ System.register(["angular2/core"], function(exports_1, context_1) {
         execute: function() {
             ContactComponent = (function () {
                 function ContactComponent() {
+                    this.email = "hola@mula.com.uy";
+                    this.facebook = "facebook.com/somosmula";
+                    this.behance = "behance.net/somosmula";
+                    this.instagram = "instagram.com/somosmula";
                 }
                 ContactComponent = __decorate([
                     core_1.Component({

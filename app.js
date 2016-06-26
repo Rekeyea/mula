@@ -16,6 +16,10 @@ app.use('/node_modules',express.static('node_modules'));
 app.use('/app',express.static('app'));
 
 
+
+app.get("/api/projects/",function(req,res){
+    
+});
 app.get("/*",function(req,res){
     res.sendFile("index.html",options);    
 });

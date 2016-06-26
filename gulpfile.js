@@ -50,23 +50,6 @@ gulp.task("tss",function() {
 });
 
 
-// //join all CSS files
-// gulp.task("concat:css",function() {
-//     return gulp.src(cssLibPaths)
-//         .pipe(concat("app.css"))
-//         .pipe(uglify())
-//         .pipe(gulp.dest("app/dist"))
-//         .pipe(browserSync.stream());
-// });
-// //join and minify all JS files
-// gulp.task("concat:js",function() {
-//     return gulp.src(jsLibPaths)
-//         .pipe(concat("app.js"))
-//         .pipe(rename({suffix:".min"}))
-//         .pipe(uglify())
-//         .pipe(gulp.dest("app/dist"))
-//         .pipe(browserSync.stream());
-// });
 const baseUrl = "./index.html";
 gulp.task("serve",["sass","tss"]);
 gulp.task("watch",function(){

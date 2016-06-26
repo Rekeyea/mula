@@ -17,6 +17,7 @@ main {
 #projects .img-wrapper {
   position: relative;
   display: inline-block;
+  box-shadow: 5px 5px 4px #aaaaaa;
   height: 100%;
   width: 100%;
   overflow: hidden; }
@@ -39,12 +40,12 @@ main {
       width: 100%;
       margin-top: -2%;
       text-align: center;
-      letter-spacing: 7px; }
+      letter-spacing: 10px; }
 
 #projects .img-wrapper:hover .overlay {
   width: 100%;
   height: 100%;
-  background: #54BE9B;
+  background: #43B38B;
   position: absolute;
   top: 0;
   left: 0;

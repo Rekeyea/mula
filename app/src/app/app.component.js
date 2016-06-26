@@ -72,9 +72,8 @@ System.register(["angular2/core", 'angular2/router', "../../common/services/link
                     this.router.subscribe(function (value) { return _this.onNext(value); });
                 };
                 AppComponent.prototype.onNext = function (value) {
-                    //uncomment to get the stacktrace
-                    //throw new Exception(""); 
-                    console.log(value);
+                    var selectedLink = this.links.filter(function (v) { return v.name === value; })[0];
+                    this.selectLink(selectedLink);
                 };
                 AppComponent = __decorate([
                     router_1.RouteConfig([

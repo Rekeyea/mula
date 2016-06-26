@@ -82,8 +82,7 @@ export class AppComponent implements IAmMainView{
 	}
 
 	private onNext(value: any): void {
-        //uncomment to get the stacktrace
-        //throw new Exception(""); 
-        console.log(value);
+        var selectedLink = this.links.filter((v:IAmALink) => v.name===value )[0];
+        this.selectLink(selectedLink);
 	}
 }

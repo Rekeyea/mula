@@ -7,5 +7,15 @@ import {Component} from "angular2/core";
 })
 
 export class ContactComponent{
-    
+    public email:string;
+    public facebook:string;
+    public behance:string;
+    public instagram:string;
+
+    constructor(){
+        this.email = "hola@mula.com.uy";
+        this.facebook = "facebook.com/somosmula";
+        this.behance = "behance.net/somosmula";
+        this.instagram = "instagram.com/somosmula";
+    }
 }

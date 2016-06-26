@@ -1,0 +1,30 @@
+@import url(https://fonts.googleapis.com/css?family=Rambla);
+html,
+document,
+body {
+  font-size: 12px;
+  font-family: "Rambla", sans-serif;
+  overflow-x: hidden;
+  margin-top: 0px !important; }
+
+main {
+  background-color: white;
+  min-height: 100vh; }
+
+h2 {
+  color: #6B6B6B;
+  font-size: 1.2rem;
+  letter-spacing: 0.4rem; }
+
+#contacts > section {
+  background-color: #43B38B;
+  min-height: 40vh; }
+  #contacts > section > section {
+    padding-top: 1rem;
+    color: white;
+    letter-spacing: 0.3rem;
+    padding-bottom: 1rem; }
+    #contacts > section > section label {
+      font-size: 1rem; }
+    #contacts > section > section b {
+      font-size: 1.5rem; }

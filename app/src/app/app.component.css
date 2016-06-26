@@ -32,7 +32,7 @@ main {
   height: 6px;
   width: 30px;
   border-radius: 15px;
-  background-color: #54BE9B; }
+  background-color: #43B38B; }
   .bar:before {
     transition: all .25s;
     content: "";
@@ -42,7 +42,7 @@ main {
     height: 6px;
     width: 30px;
     border-radius: 15px;
-    background-color: #54BE9B; }
+    background-color: #43B38B; }
   .bar:after {
     transition: all .25s;
     content: "";
@@ -52,7 +52,7 @@ main {
     height: 6px;
     width: 30px;
     border-radius: 15px;
-    background-color: #54BE9B; }
+    background-color: #43B38B; }
 
 .menu-expanded {
   transition: all .25s;
@@ -66,7 +66,7 @@ main {
   bottom: 0;
   right: 0;
   position: fixed;
-  background-color: #54BE9B;
+  background-color: #43B38B;
   z-index: 1000;
   opacity: 1; }
   .menu-expanded ul {
@@ -105,11 +105,11 @@ main {
 #app-header {
   height: 8rem; }
   #app-header h1 {
-    color: #54BE9B !important;
+    color: #43B38B !important;
     text-align: center !important;
     width: 100%;
-    font-size: 3rem;
-    letter-spacing: 7px;
+    font-size: 2.5rem;
+    letter-spacing: 10px;
     font-weight: lighter;
     height: 8rem;
     margin: 0px;
@@ -143,17 +143,17 @@ main {
         display: block;
         font-size: 1rem;
         line-height: 2.5rem;
-        color: #404045;
+        color: #6B6B6B;
         background-color: white !important;
         width: 100%;
-        letter-spacing: 7px;
-        border-width: 3px;
+        letter-spacing: 10px;
+        border-width: 2px;
         border-style: solid;
         border-color: white; }
     #app-navigation ul.navigation-list li.navigation-item:not(.active) a.navigation-link:hover {
-      color: #54BE9B !important; }
+      color: #43B38B !important; }
     #app-navigation ul.navigation-list li.navigation-item.active a.navigation-link {
-      border-color: #54BE9B; }
+      border-color: #43B38B; }
 
 #app-footer {
   padding-top: 4rem; }
@@ -163,7 +163,7 @@ main {
     padding-right: 1rem; }
     #app-footer > div > div i {
       font-size: 2.5rem;
-      color: #54BE9B; }
+      color: #43B38B; }
   #app-footer > .app-footer {
     width: 12rem;
     position: absolute; }
@@ -174,7 +174,7 @@ main {
         display: inline-block; }
         #app-footer > .app-footer > div > div i {
           font-size: 2.5rem;
-          color: #54BE9B; }
+          color: #43B38B; }
 
 #app-footer-trademark {
   bottom: 2rem;
