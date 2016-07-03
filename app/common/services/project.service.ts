@@ -5,11 +5,11 @@ import { Http, Response, RequestOptions, Headers } from 'angular2/http';
 
 @Injectable()
 export class ProjectService{
-    // private options:RequestOptions;
-    // constructor(private http:Http){
-    //     //let headers = new Headers({"Content-Type":"application/json"});
-    //     //this.options = new RequestOptions({headers:headers});
-    // }
+    private options:RequestOptions;
+    constructor(private http:Http){
+        let headers = new Headers({"Content-Type":"application/json"});
+        this.options = new RequestOptions({headers:headers});
+    }
     getProjects():Promise<Array<IAmAProject>>{
         return new Promise<Array<IAmAProject>>(resolve => setTimeout(resolve(PROJECTS),100));
     }

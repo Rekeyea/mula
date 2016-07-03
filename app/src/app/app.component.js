@@ -63,7 +63,9 @@ System.register(["angular2/core", 'angular2/router', "../../common/services/link
                     ];
                     this.selectLink = function (link) {
                         this.service.unselectLinks();
-                        this.service.selectLink(link);
+                        if (link) {
+                            this.service.selectLink(link);
+                        }
                     };
                     this.toggleCollapse = function () {
                         this.opened = !this.opened;

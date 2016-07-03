@@ -1,4 +1,4 @@
-System.register(["angular2/core", "./mock.projects"], function(exports_1, context_1) {
+System.register(["angular2/core", "./mock.projects", 'angular2/http'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(["angular2/core", "./mock.projects"], function(exports_1, contex
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, mock_projects_1;
+    var core_1, mock_projects_1, http_1;
     var ProjectService;
     return {
         setters:[
@@ -19,16 +19,17 @@ System.register(["angular2/core", "./mock.projects"], function(exports_1, contex
             },
             function (mock_projects_1_1) {
                 mock_projects_1 = mock_projects_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
             }],
         execute: function() {
             ProjectService = (function () {
-                function ProjectService() {
+                function ProjectService(http) {
+                    this.http = http;
+                    //let headers = new Headers({"Content-Type":"application/json"});
+                    //this.options = new RequestOptions({headers:headers});
                 }
-                // private options:RequestOptions;
-                // constructor(private http:Http){
-                //     //let headers = new Headers({"Content-Type":"application/json"});
-                //     //this.options = new RequestOptions({headers:headers});
-                // }
                 ProjectService.prototype.getProjects = function () {
                     return new Promise(function (resolve) { return setTimeout(resolve(mock_projects_1.PROJECTS), 100); });
                 };
@@ -45,7 +46,7 @@ System.register(["angular2/core", "./mock.projects"], function(exports_1, contex
                 };
                 ProjectService = __decorate([
                     core_1.Injectable(), 
-                    __metadata('design:paramtypes', [])
+                    __metadata('design:paramtypes', [http_1.Http])
                 ], ProjectService);
                 return ProjectService;
             }());

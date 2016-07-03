@@ -74,7 +74,9 @@ export class AppComponent implements IAmMainView{
     
     selectLink = function(link: IAmALink){
         this.service.unselectLinks();
-        this.service.selectLink(link);
+        if(link){
+            this.service.selectLink(link);
+        }
     };
     toggleCollapse=function(){
         this.opened=!this.opened;

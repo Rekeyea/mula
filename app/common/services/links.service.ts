@@ -24,6 +24,8 @@ export class LinksService{
         this.links.forEach(e=>{e.active=false;});
     }
     public selectLink=function(l:IAmALink) {
-        l.active=true;   
+        if(l){
+            l.active=true;
+        }   
     }
 }

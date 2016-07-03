@@ -41,7 +41,9 @@ System.register(["angular2/core"], function(exports_1, context_1) {
                         this.links.forEach(function (e) { e.active = false; });
                     };
                     this.selectLink = function (l) {
-                        l.active = true;
+                        if (l) {
+                            l.active = true;
+                        }
                     };
                 }
                 LinksService = __decorate([
