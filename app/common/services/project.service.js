@@ -24,6 +24,11 @@ System.register(["angular2/core", "./mock.projects"], function(exports_1, contex
             ProjectService = (function () {
                 function ProjectService() {
                 }
+                // private options:RequestOptions;
+                // constructor(private http:Http){
+                //     //let headers = new Headers({"Content-Type":"application/json"});
+                //     //this.options = new RequestOptions({headers:headers});
+                // }
                 ProjectService.prototype.getProjects = function () {
                     return new Promise(function (resolve) { return setTimeout(resolve(mock_projects_1.PROJECTS), 100); });
                 };
@@ -31,6 +36,9 @@ System.register(["angular2/core", "./mock.projects"], function(exports_1, contex
                     var index = mock_projects_1.PROJECTS.map(function (x) { return x.id; }).indexOf(id);
                     var p = mock_projects_1.PROJECTS[index];
                     return new Promise(function (resolve) { return setTimeout(resolve(p), 100); });
+                };
+                ProjectService.prototype.createProject = function (proj) {
+                    //return this.http.post("/api/project",JSON.stringify(proj),this.options);
                 };
                 ProjectService.prototype.mapServerProject = function (serverProject) {
                     return serverProject;

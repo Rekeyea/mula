@@ -7,6 +7,7 @@ import {LinksService} from "../../common/services/links.service";
 import {ProjectCenterComponent} from "../proyectos/app.projectRoutingComponent";
 import {AboutComponent} from "../nosotros/app.aboutComponent";
 import {ContactComponent} from "../contacto/app.contactComponent";
+import {AddComponent} from "../agregar/app.addComponent";
 
 
 @RouteConfig([
@@ -27,6 +28,12 @@ import {ContactComponent} from "../contacto/app.contactComponent";
         path:"/contacto",
         name:"Contacto",
         component:ContactComponent,
+        useAsDefault:false
+    },
+    {
+        path:"/agregar",
+        name:"Agregar",
+        component:AddComponent,
         useAsDefault:false
     },
     {//cualquier ruta desconocida va a Proyectos 

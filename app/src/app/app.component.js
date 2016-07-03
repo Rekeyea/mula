@@ -1,4 +1,4 @@
-System.register(["angular2/core", 'angular2/router', "../../common/services/links.service", "../proyectos/app.projectRoutingComponent", "../nosotros/app.aboutComponent", "../contacto/app.contactComponent"], function(exports_1, context_1) {
+System.register(["angular2/core", 'angular2/router', "../../common/services/links.service", "../proyectos/app.projectRoutingComponent", "../nosotros/app.aboutComponent", "../contacto/app.contactComponent", "../agregar/app.addComponent"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(["angular2/core", 'angular2/router', "../../common/services/link
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, links_service_1, app_projectRoutingComponent_1, app_aboutComponent_1, app_contactComponent_1;
+    var core_1, router_1, links_service_1, app_projectRoutingComponent_1, app_aboutComponent_1, app_contactComponent_1, app_addComponent_1;
     var AppComponent;
     return {
         setters:[
@@ -31,6 +31,9 @@ System.register(["angular2/core", 'angular2/router', "../../common/services/link
             },
             function (app_contactComponent_1_1) {
                 app_contactComponent_1 = app_contactComponent_1_1;
+            },
+            function (app_addComponent_1_1) {
+                app_addComponent_1 = app_addComponent_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
@@ -93,6 +96,12 @@ System.register(["angular2/core", 'angular2/router', "../../common/services/link
                             path: "/contacto",
                             name: "Contacto",
                             component: app_contactComponent_1.ContactComponent,
+                            useAsDefault: false
+                        },
+                        {
+                            path: "/agregar",
+                            name: "Agregar",
+                            component: app_addComponent_1.AddComponent,
                             useAsDefault: false
                         },
                         {

@@ -61,7 +61,8 @@ main {
 #projects .img {
   vertical-align: top;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  margin-bottom: -4px; }
 
 #projects > section {
   position: relative;
