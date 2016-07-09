@@ -25,14 +25,6 @@ System.register(["angular2/core", "../../common/services/project.service"], func
                 function AddComponent(projectService) {
                     this.projectService = projectService;
                 }
-                AddComponent.prototype.addProject = function () {
-                    this.projectService.createProject({
-                        title: this.title,
-                        description: this.description,
-                        files: this.files,
-                        mainFile: this.mainFile
-                    });
-                };
                 AddComponent = __decorate([
                     core_1.Component({
                         selector: "agregar-mula",

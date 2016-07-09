@@ -17,9 +17,11 @@ export class DetalleProyecto implements OnActivate{
             this._linksService.unselectLinks();
             this._projectService.getProject(this._params.get("id")).then(p=>
             {
+                console.log(p);
                 this.project=p
                 resolve(true);    
-            });
+            })
+            .catch(err=>console.error(err));
         });
     }
     
@@ -27,5 +29,7 @@ export class DetalleProyecto implements OnActivate{
         private _linksService:LinksService, 
         private _projectService: ProjectService, 
         private _params :RouteParams 
-    ){}
+    ){
+        this.project = {title:"",description:"",id:"",images:[],mainImage:""};
+    }
 }

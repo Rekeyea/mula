@@ -15,12 +15,13 @@ export class AddComponent{
     public username:string;
     public password:string;
     constructor(private projectService:ProjectService){}
-    addProject(){
-        this.projectService.createProject({
-             title: this.title,
-             description:this.description,
-             files: this.files,
-             mainFile: this.mainFile
-        });
-    }
+    // addProject(){
+    //     this.projectService.createProject({
+    //          title: this.title,
+    //          description:this.description,
+    //          files: this.files,
+    //          mainFile: this.mainFile
+    //     })
+    //     .then(res=>console.log(res.json()),err=>console.error(err));
+    // }
 }

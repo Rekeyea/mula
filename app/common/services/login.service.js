@@ -11,7 +11,7 @@ System.register(["angular2/core", 'angular2/http', 'rxjs/add/operator/toPromise'
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1, http_1;
-    var ProjectService;
+    var LoginService;
     return {
         setters:[
             function (core_1_1) {
@@ -22,46 +22,27 @@ System.register(["angular2/core", 'angular2/http', 'rxjs/add/operator/toPromise'
             },
             function (_1) {}],
         execute: function() {
-            ProjectService = (function () {
-                function ProjectService(http) {
+            LoginService = (function () {
+                function LoginService(http) {
                     this.http = http;
                     var headers = new http_1.Headers({ "Content-Type": "application/json" });
                     this.options = new http_1.RequestOptions({ headers: headers });
                 }
-                ProjectService.prototype.getProjects = function () {
-                    //return new Promise<Array<IAmAProject>>(resolve => setTimeout(resolve(PROJECTS),100));
-                    return this.http.get("/api/projects", this.options)
+                LoginService.prototype.login = function (username, password) {
+                    var user = { "username": "mula", "password": "mula" };
+                    return this.http
+                        .post("/api/login", JSON.stringify(user), this.options)
                         .toPromise()
-                        .then(function (res) {
-                        var projs = res.json();
-                        return projs.map(function (v) { return v; });
-                    });
+                        .then(function (x) { return localStorage.setItem("user", JSON.stringify(user)); })
+                        .catch(function (err) { return console.error(JSON.stringify(err)); });
                 };
-                ProjectService.prototype.getProject = function (id) {
-                    return this.http.get("/api/projects/" + id, this.options)
-                        .toPromise()
-                        .then(function (res) {
-                        var proj = res.json();
-                        console.log(proj);
-                        return proj;
-                    });
-                };
-                // createProject(proj){
-                //     var user = JSON.parse(localStorage.getItem("user"));
-                //     proj.username = user.username;
-                //     proj.password = user.password;
-                //     return this.http.post("/api/project",JSON.stringify(proj),this.options).toPromise();
-                // }
-                ProjectService.prototype.mapServerProject = function (serverProject) {
-                    return serverProject;
-                };
-                ProjectService = __decorate([
+                LoginService = __decorate([
                     core_1.Injectable(), 
                     __metadata('design:paramtypes', [http_1.Http])
-                ], ProjectService);
-                return ProjectService;
+                ], LoginService);
+                return LoginService;
             }());
-            exports_1("ProjectService", ProjectService);
+            exports_1("LoginService", LoginService);
         }
     }
 });

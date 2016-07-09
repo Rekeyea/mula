@@ -32,15 +32,18 @@ System.register(["angular2/core", 'angular2/router', "../../../common/services/p
                     this._linksService = _linksService;
                     this._projectService = _projectService;
                     this._params = _params;
+                    this.project = { title: "", description: "", id: "", images: [], mainImage: "" };
                 }
                 DetalleProyecto.prototype.routerOnActivate = function (to, from) {
                     var _this = this;
                     return new Promise(function (resolve) {
                         _this._linksService.unselectLinks();
                         _this._projectService.getProject(_this._params.get("id")).then(function (p) {
+                            console.log(p);
                             _this.project = p;
                             resolve(true);
-                        });
+                        })
+                            .catch(function (err) { return console.error(err); });
                     });
                 };
                 DetalleProyecto = __decorate([

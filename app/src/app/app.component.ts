@@ -8,6 +8,7 @@ import {ProjectCenterComponent} from "../proyectos/app.projectRoutingComponent";
 import {AboutComponent} from "../nosotros/app.aboutComponent";
 import {ContactComponent} from "../contacto/app.contactComponent";
 import {AddComponent} from "../agregar/app.addComponent";
+import {LoginComponent} from "../login/app.loginComponent";
 
 
 @RouteConfig([
@@ -30,12 +31,18 @@ import {AddComponent} from "../agregar/app.addComponent";
         component:ContactComponent,
         useAsDefault:false
     },
-    {
-        path:"/agregar",
-        name:"Agregar",
-        component:AddComponent,
-        useAsDefault:false
-    },
+    // {
+    //     path:"/agregar",
+    //     name:"Agregar",
+    //     component:AddComponent,
+    //     useAsDefault:false
+    // },
+    // {
+    //     path:"/login",
+    //     name:"Login",
+    //     component:LoginComponent,
+    //     useAsDefault:false
+    // },
     {//cualquier ruta desconocida va a Proyectos 
         path: '/**', 
         redirectTo: ['Proyectos'] 

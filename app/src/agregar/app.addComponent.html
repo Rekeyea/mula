@@ -1,25 +1,21 @@
 <article>
-    <section id="login">
-        <input type="text" placeholder="Usuario">
-        <input type="password" placeholder="Contraseña">
-    </section>
     <section id="projectAdd">
         <div>
             <label for="titulo">Titulo del Proyecto</label><br>
-            <input type="text" placeholder="Titulo" id="titulo">
+            <input type="text" placeholder="Titulo" id="titulo" [(ngModel)]="title">
         </div>
         <div>
             <label for="desc">Descripción del Proyecto</label><br>
-            <textarea name="desc" id="desc" cols="30" rows="10"></textarea>
+            <textarea name="desc" id="desc" cols="30" rows="10" [(ngModel)]="description"></textarea>
         </div>
         <div>
             <label for="imgs">Imágenes del Proyecto</label><br>
-            <input type="file" multiple="multiple" id="imgs" name="imgs">
+            <input type="file" multiple="multiple" id="imgs" name="imgs" [(ngModel)]="files">
         </div>
         <div>
-            <label for="imgP">Imágenes del Proyecto</label><br>
-            <input type="file" id="imgP" name="imgP">
+            <label for="imgP">Imágen Principal</label><br>
+            <input type="file" id="imgP" name="imgP" [(ngModel)]="mainFile">
         </div>
     </section>
-    <button type="button">Agregar Proyecto</button>
+    <button type="button" (click)="addProject()">Agregar Proyecto</button>
 </article>
